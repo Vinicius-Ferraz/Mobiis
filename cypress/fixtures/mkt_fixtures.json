@@ -21,7 +21,7 @@
             },
             {
                 "id": "prod_promo_02",
-                "name": "amido",
+                "name": "coca-cola",
                 "de_preco": "13.99",
                 "por_preco": "9.99"
             },
@@ -33,7 +33,7 @@
             },
             {
                 "id": "prod_promo_04",
-                "name": "cremo",
+                "name": "creme",
                 "de_preco": "R$12,00",
                 "por_preco": "R$10,00"
             },
@@ -45,13 +45,13 @@
             },
             {
                 "id": "prod_promo_06",
-                "name": "bebida",
+                "name": "whey",
                 "de_preco": "R$74,99",
                 "por_preco": "R$60,99"
             },
             {
                 "id": "prod_01",
-                "name": "coca-cola",
+                "name": "amido",
                 "por_preco": "R$10,00"
             },
             {

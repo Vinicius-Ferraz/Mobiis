@@ -1,24 +1,22 @@
 describe('Caminho feliz de criação de campanha', () => {
   
   //executando login, criando uma campanha com 30 produtos
-  it.only('Login user e criação de oferta de 30 produtos', () => {
+  it.only('Login user e criação de oferta de 20 produtos', () => {
     const prod = require('../fixtures/mkt_fixtures.json')
-    //login no imkt
-    cy.visit('https://imkt.dev.mobiis.com.br/login', { failOnStatusCode: false })
-      .get('#btn_entrar_login').click()
-      .get('#input_email_login').type(prod.data_user.login)
-      .get('#input_senha_login').type(prod.data_user.pwd)
-      .get('#btn_entrar_cadastrado').click()
-
+        //login no imkt
+      cy.visit('https://imkt.qa.mobiis.com.br/', { failOnStatusCode: false })
+        .get('#btn_entrar_login').click()
+        .get('#input_email_login').type(prod.data_user.login)
+        .get('#input_senha_login').type(prod.data_user.pwd)
+        .get('#btn_entrar_cadastrado').click()
     //dados iniciais de criação de campanha: nome, data inicio, data final
     cy.get('#btn_criar_nova_campanha').click()
-      // .get('#input_nome_campanha').type(prod.camp_details.name)
+      .get('#input_nome_campanha').type(prod.camp_details.name)
       .get('#input_data_inicial').type(prod.camp_details.start)
       .get('#input_data_final').type(prod.camp_details.end)
       .get('#btn_criacao_proximo').click()
 
     /*Selecionando 30 produtos e indo para a selação de produtos */
-    cy.get('#btn_criar_30_produtos').click()
     cy.get('#btn_buscar_produto').click()
 
     /*1 produto*/
@@ -244,8 +242,8 @@ describe('Caminho feliz de criação de campanha', () => {
       .get('#btn_adicionar').click()
 
     /*clicar avançar e clicar em Gerar Campanha*/
-      .get('#btnwzd_criacao_proximo').click()
-      .get('#btn_saz_Dia_das_Crianças').click()
+    cy.get('#btnwzd_criacao_proximo').click()
+      .get('#btn_saz_são_joão').click()
       .get('#btnwzd_criacao_proximo').click()
       .get('#btn_encarte').click()
       .get('#btn_story').click()
