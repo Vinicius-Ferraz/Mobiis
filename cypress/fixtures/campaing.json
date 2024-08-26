@@ -1,0 +1,67 @@
+{
+  "Products": [
+    {
+      "name": "Heath",
+      "id": 189591961206784,
+      "price_before": "119.00",
+      "price_after": "456.00"
+    },
+    {
+      "name": "Tierra",
+      "id": 6935111574487040,
+      "price_before": "262.00",
+      "price_after": "999.00"
+    },
+    {
+      "name": "Piper",
+      "id": 943481736396800,
+      "price_before": "922.00",
+      "price_after": "739.00"
+    },
+    {
+      "name": "Cyril",
+      "id": 8017564147908608,
+      "price_before": "594.00",
+      "price_after": "800.00"
+    },
+    {
+      "name": "Rafaela",
+      "id": 198874960494592,
+      "price_before": "974.00",
+      "price_after": "982.00"
+    },
+    {
+      "name": "Morton",
+      "id": 1245709936361472,
+      "price_before": "211.00",
+      "price_after": "10.00"
+    },
+    {
+      "name": "Clinton",
+      "id": 3445433057673216,
+      "price_before": "180.00",
+      "price_after": "621.00"
+    },
+    {
+      "name": "Margie",
+      "id": 4255894095265792,
+      "price_before": "902.00",
+      "price_after": "110.00"
+    },
+    {
+      "name": "Keely",
+      "id": 2279445752709120,
+      "price_before": "857.00",
+      "price_after": "962.00"
+    },
+    {
+      "name": "Greta",
+      "id": 5791036548841472,
+      "price_before": "669.00",
+      "price_after": "357.00"
+    }
+  ],
+  "campaingName": "Practical Frozen Salad",
+  "startDate": "08/06/2024",
+  "endDate": "27/03/2025"
+}
