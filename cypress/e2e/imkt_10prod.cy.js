@@ -8,10 +8,10 @@ describe('CRUD, caminho feliz de criação de campanha', () => {
 
   //executando login, criando uma campanha com 10 produtos
   it.only('Criação de campanha', () => {
-    cy.createProductsFixture(10)
-    cy.createCampaignData()
+    //cy.createProductsFixture(10)
+    //cy.createCampaignData()
     cy.createCampaign()
-    cy.addProductsToCampaign(10)
+    cy.addProductsToCampaign(30)
   //preenche os 10 produtos da campanha
 
     })

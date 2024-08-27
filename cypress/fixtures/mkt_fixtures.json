@@ -1,173 +1,165 @@
 {
-	"data_user": 
-        {
-            "login": "vinicius.ferraz@mobiis.com.br",
-            "pwd": "12345"
-        },
-
-    "camp_details": 
-        {
-            "name": "[Preço unico]",
-            "start": "01-12-2024",
-            "end": "11-12-2024"
-        },
-
-        "produtos": [
-            {
-                "id": "prod_promo_01",
-                "name": "zero",
-                "de_preco": "R$12,99",
-                "por_preco":"R$10,00"
-            },
-            {
-                "id": "prod_promo_02",
-                "name": "coca-cola",
-                "de_preco": "13.99",
-                "por_preco": "9.99"
-            },
-            {
-                "id": "prod_promo_03",
-                "name": "cocada",
-                "de_preco": "R$17,80",
-                "por_preco": "R$14,99"
-            },
-            {
-                "id": "prod_promo_04",
-                "name": "creme",
-                "de_preco": "R$12,00",
-                "por_preco": "R$10,00"
-            },
-            {
-                "id": "prod_promo_05",
-                "name": "guarana",
-                "de_preco": "R$4,99",
-                "por_preco": "R$3,99"
-            },
-            {
-                "id": "prod_promo_06",
-                "name": "whey",
-                "de_preco": "R$74,99",
-                "por_preco": "R$60,99"
-            },
-            {
-                "id": "prod_01",
-                "name": "amido",
-                "por_preco": "R$10,00"
-            },
-            {
-                "id": "prod_02",
-                "name": "batata",
-                "por_preco": "R$15.00"
-            },
-            {
-                "id": "prod_03",
-                "name": "farinha",
-                "por_preco": "R$18,99"
-            },
-            {
-                "id": "prod_04",
-                "name": "tang",
-                "por_preco": "R$0,95"
-            },
-            {
-                "id": "prod_05",
-                "name": "gelatina",
-                "por_preco": "R$1,99"
-            },
-            {
-                "id": "prod_06",
-                "name": "nescau",
-                "por_preco": "R$15.00"
-            },
-            {
-                "id": "prod_07",
-                "name": "guardanapo",
-                "por_preco": "R$12,99"
-            },
-            {
-                "id": "prod_08",
-                "name": "fanta",
-                "por_preco": "R$2.00"
-            },
-            {
-                "id": "prod_09",
-                "name": "alcool",
-                "por_preco": "R$8,99"
-            },
-            {
-                "id": "prod_10",
-                "name": "detergente",
-                "por_preco": "R$15.00"
-            },
-            {
-                "id": "prod_11",
-                "name": "molho",
-                "por_preco": "R$4,99"
-            },
-            {
-                "id": "prod_12",
-                "name": "queijo",
-                "por_preco": "R$16.99"
-            },
-            {
-                "id": "prod_13",
-                "name": "presunto",
-                "por_preco": "R$3.99"
-            },
-            {
-                "id": "prod_14",
-                "name": "requeijao",
-                "por_preco": "R$17.35"
-            },
-            {
-                "id": "prod_15",
-                "name": "cheetos",
-                "por_preco": "R$5.50"
-            },
-            {
-                "id": "prod_16",
-                "name": "ruffles",
-                "por_preco": "R$6,59"
-            },
-            {
-                "id": "prod_17",
-                "name": "mostarda",
-                "por_preco": "R$4,65"
-            },
-            {
-                "id": "prod_18",
-                "name": "catchup",
-                "por_preco": "R$9.32"
-            },
-            {
-                "id": "prod_19",
-                "name": "azeite",
-                "por_preco": "R$94,99"
-            },
-            {
-                "id": "prod_20",
-                "name": "maionese",
-                "por_preco": "R$14.99"
-            },
-            {
-                "id": "prod_21",
-                "name": "desodorante",
-                "por_preco": "R$9,59"
-            },
-            {
-                "id": "prod_22",
-                "name": "cerveja",
-                "por_preco": "R$2.29"
-            },
-            {
-                "id": "prod_23",
-                "name": "panetone",
-                "por_preco": "R$12.99"
-            },
-            {
-                "id": "prod_24",
-                "name": "cebola",
-                "por_preco": "R$4.79"
-            }]
-        }
-    
+  "data_user": {
+    "login": "vinicius.ferraz@mobiis.com.br",
+    "pwd": "12345"
+  },
+  "produtos": [
+    {
+      "id": "prod_promo_01",
+      "name": "zero",
+      "de_preco": "R$12,99",
+      "por_preco": "R$10,00"
+    },
+    {
+      "id": "prod_promo_02",
+      "name": "coca-cola",
+      "de_preco": "13.99",
+      "por_preco": "9.99"
+    },
+    {
+      "id": "prod_promo_03",
+      "name": "cocada",
+      "de_preco": "R$17,80",
+      "por_preco": "R$14,99"
+    },
+    {
+      "id": "prod_promo_04",
+      "name": "creme",
+      "de_preco": "R$12,00",
+      "por_preco": "R$10,00"
+    },
+    {
+      "id": "prod_promo_05",
+      "name": "guarana",
+      "de_preco": "R$4,99",
+      "por_preco": "R$3,99"
+    },
+    {
+      "id": "prod_promo_06",
+      "name": "whey",
+      "de_preco": "R$74,99",
+      "por_preco": "R$60,99"
+    },
+    {
+      "id": "prod_01",
+      "name": "amido",
+      "por_preco": "R$10,00"
+    },
+    {
+      "id": "prod_02",
+      "name": "batata",
+      "por_preco": "R$15.00"
+    },
+    {
+      "id": "prod_03",
+      "name": "farinha",
+      "por_preco": "R$18,99"
+    },
+    {
+      "id": "prod_04",
+      "name": "tang",
+      "por_preco": "R$0,95"
+    },
+    {
+      "id": "prod_05",
+      "name": "gelatina",
+      "por_preco": "R$1,99"
+    },
+    {
+      "id": "prod_06",
+      "name": "nescau",
+      "por_preco": "R$15.00"
+    },
+    {
+      "id": "prod_07",
+      "name": "guardanapo",
+      "por_preco": "R$12,99"
+    },
+    {
+      "id": "prod_08",
+      "name": "fanta",
+      "por_preco": "R$2.00"
+    },
+    {
+      "id": "prod_09",
+      "name": "alcool",
+      "por_preco": "R$8,99"
+    },
+    {
+      "id": "prod_10",
+      "name": "detergente",
+      "por_preco": "R$15.00"
+    },
+    {
+      "id": "prod_11",
+      "name": "molho",
+      "por_preco": "R$4,99"
+    },
+    {
+      "id": "prod_12",
+      "name": "queijo",
+      "por_preco": "R$16.99"
+    },
+    {
+      "id": "prod_13",
+      "name": "presunto",
+      "por_preco": "R$3.99"
+    },
+    {
+      "id": "prod_14",
+      "name": "requeijao",
+      "por_preco": "R$17.35"
+    },
+    {
+      "id": "prod_15",
+      "name": "cheetos",
+      "por_preco": "R$5.50"
+    },
+    {
+      "id": "prod_16",
+      "name": "ruffles",
+      "por_preco": "R$6,59"
+    },
+    {
+      "id": "prod_17",
+      "name": "mostarda",
+      "por_preco": "R$4,65"
+    },
+    {
+      "id": "prod_18",
+      "name": "catchup",
+      "por_preco": "R$9.32"
+    },
+    {
+      "id": "prod_19",
+      "name": "azeite",
+      "por_preco": "R$94,99"
+    },
+    {
+      "id": "prod_20",
+      "name": "maionese",
+      "por_preco": "R$14.99"
+    },
+    {
+      "id": "prod_21",
+      "name": "desodorante",
+      "por_preco": "R$9,59"
+    },
+    {
+      "id": "prod_22",
+      "name": "cerveja",
+      "por_preco": "R$2.29"
+    },
+    {
+      "id": "prod_23",
+      "name": "panetone",
+      "por_preco": "R$12.99"
+    },
+    {
+      "id": "prod_24",
+      "name": "cebola",
+      "por_preco": "R$4.79"
+    }
+  ]
+}
+  

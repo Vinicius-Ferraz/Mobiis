@@ -1,7 +1,7 @@
 
 import { elmProducts } from '../support/elements';
 import { faker } from '@faker-js/faker'
-
+import * as data from '../fixtures/mkt_fixtures.json';
 
 //login no imkt
 Cypress.Commands.add('LoginImkt', (email, password) => {
@@ -14,65 +14,53 @@ Cypress.Commands.add('LoginImkt', (email, password) => {
 
 // Cria a campanha
 Cypress.Commands.add('createCampaign', () => {
-    cy.readFile('cypress/fixtures/campaing.json').then((data) => {
-        const { campaingName, startDate, endDate } = data;
+    
+        //const { campaingName, startDate, endDate } = data;
+        const startDate = faker.date.past().toLocaleDateString('pt-BR');
         cy.get(elmProducts.buttonNewCampaing).click(),
-        cy.get(elmProducts.inputNameCampaing).type(campaingName),
+        cy.get(elmProducts.inputNameCampaing).type(faker.commerce.productName()),
         cy.get(elmProducts.inputInicialDate).type(startDate),
-        cy.get(elmProducts.inputFinalDate).type(endDate),
+        cy.get(elmProducts.inputFinalDate).type(faker.date.future().toLocaleDateString('pt-BR', { minDate: startDate })),
         cy.get(elmProducts.buttonNextCreation).click()
     });
-});
+
 
 // Cria dados de produtos para campanha
 
 // Cria dados de produtos para campanha
 
-Cypress.Commands.add('createProductsFixture', (numHits) => {
-    cy.readFile('cypress/fixtures/campaing.json').then((data) => {
-        const existingData = data || {}; // Verificar se o arquivo já possui dados
-        const newData = {
-            'Products': Cypress._.times(numHits, () => {
-                return {
-                    'name': faker.person.firstName(),
-                    'id': faker.number.int(),
-                    'price_before': faker.commerce.price(),
-                    'price_after': faker.commerce.price()
-                }
-            })
-        }
-        const mergedData = { ...existingData, ...newData }; // Faz o merge dos dados existentes com os novos dados
-        cy.writeFile('cypress/fixtures/campaing.json', mergedData)
-    })
-})
+
 
 // Cria dados de campanha
 Cypress.Commands.add('createCampaignData', () => {
-    cy.readFile('cypress/fixtures/campaing.json').then((data) => {
-        const { initialDate, finalDate } = data;
+    const { campaignName, startDate, endDate } = data
         const newData = {
             'campaingName': faker.commerce.productName(),
             'startDate': faker.date.past().toLocaleDateString('pt-BR'),
-            'endDate': faker.date.future().toLocaleDateString('pt-BR', { minDate: initialDate })
+            'endDate': faker.date.future().toLocaleDateString('pt-BR', { minDate: startDate })
         }
         const mergedData = { ...data, ...newData }
-        cy.writeFile('cypress/fixtures/campaing.json', mergedData);
-    });
-});
+        cy.writeFile('cypress/fixtures/mkt_fixtures.json', mergedData)
+    })
+
 
 
 Cypress.Commands.add('addProductsToCampaign', (numProducts) => {
-    cy.readFile('cypress/fixtures/campaing.json').then((data) => {
-        const { Products } = data;
-        for (let i = 0; i < numProducts; i++) {
-            const product = Products[i % Products.length];
-            cy.get('#btn_buscar_produto').click()
-                .get('#input_buscar_produto').clear().type(product.name)
-                .get('#btn_0', { timeout: 30000 }).should('be.visible').click()
-                .get('#check_oferta_especial').check()
-                .get('#input_preco_de').type(product.price_before)
-                .get('#input_preco_por').type(product.price_after)
-                .get('#btn_adicionar').click();
+   
+        cy.get('#btn_buscar_produto').click()
+
+        const produtos = data.produtos.slice(0, numProducts)
+        for (const produto of produtos)  {            
+           
+        cy.get('#input_buscar_produto').clear().type(produto.name)
+            .get('#btn_0', { timeout: 30000 }).should('be.visible').click()
+            if (produto.de_preco) {
+                cy.get('#check_oferta_especial').invoke('css','opacity', '1') //FIXME: opacity igual a zero é sacanagem
+                cy.get('#check_oferta_especial').should('be.visible')
+                cy.get('#check_oferta_especial').check()
+                cy.get('#input_preco_de').type(produto.de_preco)
+                }
+            cy.get('#input_preco_por').type(produto.por_preco)
+            .get('#btn_adicionar').click();
         }
-    });
-});
+    })
