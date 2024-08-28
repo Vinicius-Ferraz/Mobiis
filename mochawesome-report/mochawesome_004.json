@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-26T19:46:18.016Z",
+    "end": "2024-08-26T19:48:27.721Z",
+    "duration": 129705,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9829d4fa-b6be-4332-a8e5-3fc1b70a0ded",
+      "title": "",
+      "fullFile": "cypress\\e2e\\imkt_20prod.cy.js",
+      "file": "cypress\\e2e\\imkt_20prod.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78302463-3d85-46f2-ba22-e7542fc9c560",
+          "title": "Caminho feliz de criação de campanha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login user e criação de oferta de 20 produtos",
+              "fullTitle": "Caminho feliz de criação de campanha Login user e criação de oferta de 20 produtos",
+              "timedOut": null,
+              "duration": 125425,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const prod = __webpack_require__(/*! ../fixtures/mkt_fixtures.json */ \"./cypress/fixtures/mkt_fixtures.json\");\n//login no imkt\ncy.visit('https://imkt.qa.mobiis.com.br/', {\n  failOnStatusCode: false\n}).get('#btn_entrar_login').click().get('#input_email_login').type(prod.data_user.login).get('#input_senha_login').type(prod.data_user.pwd).get('#btn_entrar_cadastrado').click();\n//dados iniciais de criação de campanha: nome, data inicio, data final\ncy.get('#btn_criar_nova_campanha').click().get('#input_nome_campanha').type(prod.camp_details.name).get('#input_data_inicial').type(prod.camp_details.start).get('#input_data_final').type(prod.camp_details.end).get('#btn_criacao_proximo').click();\n/*Selecionando 30 produtos e indo para a selação de produtos */\ncy.get('#btn_buscar_produto').click()\n/*1 produto*/.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[0].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#check_oferta_especial').check().get('#input_preco_de').type(prod.produtos[0].de_preco).get('#input_preco_por').type(prod.produtos[0].por_preco).get('#btn_adicionar').click()\n/*2 produto*/.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[1].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#check_oferta_especial').check().get('#input_preco_de').type(prod.produtos[1].de_preco).get('#input_preco_por').type(prod.produtos[1].por_preco).get('#btn_adicionar').click()\n/*3 produto*/.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[2].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#check_oferta_especial').check().get('#input_preco_de').type(prod.produtos[2].de_preco).get('#input_preco_por').type(prod.produtos[2].por_preco).get('#btn_adicionar').click();\n/*4 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[3].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#check_oferta_especial').check().get('#input_preco_de').type(prod.produtos[3].de_preco).get('#input_preco_por').type(prod.produtos[3].por_preco).get('#btn_adicionar').click();\n/*5 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[4].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[4].por_preco).get('#btn_adicionar').click();\n/*6 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[5].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[5].por_preco).get('#btn_adicionar').click();\n/*7 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[6].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[6].por_preco).get('#btn_adicionar').click();\n/*8 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[7].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[7].por_preco).get('#btn_adicionar').click();\n/*9 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[8].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[8].por_preco).get('#btn_adicionar').click();\n/*10 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[9].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[9].por_preco).get('#btn_adicionar').click();\n/*11 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[10].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[10].por_preco).get('#btn_adicionar').click();\n/*12 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[11].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[11].por_preco).get('#btn_adicionar').click();\n/*13 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[12].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[12].por_preco).get('#btn_adicionar').click();\n/*14 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[13].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[13].por_preco).get('#btn_adicionar').click();\n/*15 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[14].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[14].por_preco).get('#btn_adicionar').click();\n/*16 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[15].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[15].por_preco).get('#btn_adicionar').click();\n/*17 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[16].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[16].por_preco).get('#btn_adicionar').click();\n/*18 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[17].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[17].por_preco).get('#btn_adicionar').click();\n/*19 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[18].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[18].por_preco).get('#btn_adicionar').click();\n/*20 produto*/\ncy.get('#input_buscar_produto').clear('z').get('#input_buscar_produto').type(prod.produtos[19].name).get('#btn_0', {\n  timeout: 30000\n}).should('be.visible').click().get('#input_preco_por').type(prod.produtos[19].por_preco).get('#btn_adicionar').click();\n/*clicar em proximo */\ncy.get('#btn_fechar_busca').click().get('#btn_criar_20_produtos').click().get('#btnwzd_criacao_proximo').click().get('#btn_saz_black_friday').click().get('#btnwzd_criacao_proximo').click().get('#btn_encarte').click().get('#btn_story').click().get('#btn_gerar_campanha').click();\n/*checagem de campanha criada com sucesso*/\ncy.get('#card_campanha_0').click().get('#btn_encarte_download').should('be.visible').get('#btn_encarte_visualizar').should('be.visible').get('#btn_story_download').should('be.visible').get('#btn_story_visualizar').should('be.visible');",
+              "err": {},
+              "uuid": "e41e848f-3c5c-4a16-8436-17b0f75ddc73",
+              "parentUUID": "78302463-3d85-46f2-ba22-e7542fc9c560",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e41e848f-3c5c-4a16-8436-17b0f75ddc73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 125425,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-26T17:47:17.610Z",
+    "end": "2024-08-26T17:47:30.501Z",
+    "duration": 12891,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b1b836f4-6928-4e1e-a67c-3ebb6ba1f69e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\imkt_10prod.cy.js",
+      "file": "cypress\\e2e\\imkt_10prod.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "119935d0-6cf7-44ae-9116-e807d5df5844",
+          "title": "CRUD, caminho feliz de criação de campanha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Criação de campanha",
+              "fullTitle": "CRUD, caminho feliz de criação de campanha Criação de campanha",
+              "timedOut": null,
+              "duration": 8487,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.createProductsFixture(10);\ncy.createCampaignData();\ncy.createCampaign();\ncy.addProductsToCampaign(10);\n//preenche os 10 produtos da campanha",
+              "err": {},
+              "uuid": "45432d11-9ad5-4469-8e07-5429459a834f",
+              "parentUUID": "119935d0-6cf7-44ae-9116-e807d5df5844",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "45432d11-9ad5-4469-8e07-5429459a834f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8487,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

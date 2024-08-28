@@ -1,5 +1,4 @@
 
-
 describe('CRUD, caminho feliz de criação de campanha', () => {
   const prod = require('../fixtures/mkt_fixtures.json');
   beforeEach(() => {
@@ -8,11 +7,8 @@ describe('CRUD, caminho feliz de criação de campanha', () => {
 
   //executando login, criando uma campanha com 10 produtos
   it.only('Criação de campanha', () => {
-    //cy.createProductsFixture(10)
-    //cy.createCampaignData()
-    cy.createCampaign()
-    cy.addProductsToCampaign(30)
-  //preenche os 10 produtos da campanha
-
+    cy.createCampaign() // cria campanha
+    cy.chooseCampaignSize('10') // escolhe tamanho da campanha
+    //cy.addProductsToCampaign(10) // adiciona produtos a campanha
     })
 })  
